@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Básica de HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #FAFAFA;
+            margin: 0;
+            padding: 0 20px;
+        }
+        h1, h2, h3 {
+            color: #0277BD;
+        }
+        p {
+            color: #555;
+        }
+        code {
+            background-color: #F5F5F5;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        pre {
+            background-color: #F5F5F5;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        nav {
+            background-color: #0288D1;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="Etiquetas.html">Etiquetas HTML</a>
+        <a href="Formularios.html">Formularios HTML</a>
+        <a href="CSS.html">Guía de CSS</a>
+    </nav>
+
+    <div class="container">
+        <h1>Introducción a HTML</h1>
+        <p>HTML (HyperText Markup Language) es el lenguaje estándar para crear páginas web. Fue desarrollado por Tim Berners-Lee en 1991, y se utiliza para estructurar el contenido en la web, creando textos, imágenes, enlaces y otros elementos interactivos.</p>
+        
+        <h2>Estructura Básica de un Documento HTML</h2>
+        <p>Todo documento HTML sigue una estructura básica que consiste en etiquetas (tags) que definen distintos elementos del contenido.</p>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Título de la Página&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;h1&gt;Encabezado Principal&lt;/h1&gt;
+    &lt;p&gt;Este es un párrafo de ejemplo.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+        <h3>Explicación de la Estructura</h3>
+        <ul>
+            <li><strong>&lt;!DOCTYPE html&gt;:</strong> Define el tipo de documento como HTML5.</li>
+            <li><strong>&lt;html&gt;:</strong> La etiqueta raíz que contiene todo el contenido HTML.</li>
+            <li><strong>&lt;head&gt;:</strong> Contiene metadatos como el título y las configuraciones de la página.</li>
+            <li><strong>&lt;meta charset="UTF-8"&gt;:</strong> Define la codificación de caracteres, recomendada como UTF-8 para soportar la mayoría de los caracteres.</li>
+            <li><strong>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;:</strong> Configura la vista para dispositivos móviles.</li>
+            <li><strong>&lt;title&gt;:</strong> Define el título que se muestra en la pestaña del navegador.</li>
+            <li><strong>&lt;body&gt;:</strong> Contiene el contenido visible de la página, como textos, imágenes, y enlaces.</li>
+        </ul>
+
+        <h2>Encabezados en HTML</h2>
+        <p>Los encabezados en HTML se utilizan para definir la jerarquía de títulos en un documento. Existen seis niveles de encabezados, desde <code>&lt;h1&gt;</code> hasta <code>&lt;h6&gt;</code>, siendo <code>&lt;h1&gt;</code> el más importante.</p>
+        <pre><code>&lt;h1&gt;Este es un Encabezado de Nivel 1&lt;/h1&gt;
+&lt;h2&gt;Este es un Encabezado de Nivel 2&lt;/h2&gt;
+&lt;h3&gt;Este es un Encabezado de Nivel 3&lt;/h3&gt;</code></pre>
+        <p>Los encabezados ayudan a organizar el contenido, facilitando la lectura tanto para los usuarios como para los motores de búsqueda.</p>
+
+        <h2>Parrafos y Texto en HTML</h2>
+        <p>Los párrafos se definen con la etiqueta <code>&lt;p&gt;</code>. Es posible aplicar estilos y formatos adicionales utilizando etiquetas de texto como <code>&lt;strong&gt;</code> para negrita o <code>&lt;em&gt;</code> para cursiva.</p>
+        <pre><code>&lt;p&gt;Este es un párrafo de ejemplo. &lt;strong&gt;Este texto está en negrita&lt;/strong&gt; y &lt;em&gt;este texto está en cursiva&lt;/em&gt;.&lt;/p&gt;</code></pre>
+
+        <h2>Enlaces en HTML</h2>
+        <p>Los enlaces permiten navegar entre diferentes páginas o recursos en la web. Se crean con la etiqueta <code>&lt;a&gt;</code> y el atributo <code>href</code>, que indica la dirección del enlace.</p>
+        <pre><code>&lt;a href="https://www.ejemplo.com"&gt;Visitar Ejemplo.com&lt;/a&gt;</code></pre>
+        <p>Este enlace llevará al usuario a <a href="https://www.ejemplo.com">Ejemplo.com</a>.</p>
+
+        <h2>Imágenes en HTML</h2>
+        <p>Las imágenes se añaden a una página web usando la etiqueta <code>&lt;img&gt;</code> con atributos como <code>src</code> (fuente de la imagen) y <code>alt</code> (texto alternativo para accesibilidad).</p>
+        <pre><code>&lt;img src="https://via.placeholder.com/150" alt="Texto descriptivo de la imagen"&gt;</code></pre>
+        <p>Ejemplo de imagen:</p>
+        <img src="https://via.placeholder.com/150" alt="Texto descriptivo de la imagen">
+
+        <h2>Listas en HTML</h2>
+        <p>Existen dos tipos principales de listas en HTML: listas ordenadas (<code>&lt;ol&gt;</code>) y listas no ordenadas (<code>&lt;ul&gt;</code>). Cada ítem de la lista se define con la etiqueta <code>&lt;li&gt;</code>.</p>
+
+        <h3>Lista Ordenada</h3>
+        <pre><code>&lt;ol&gt;
+    &lt;li&gt;Primer ítem&lt;/li&gt;
+    &lt;li&gt;Segundo ítem&lt;/li&gt;
+    &lt;li&gt;Tercer ítem&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+        <p>Esto genera:</p>
+        <ol>
+            <li>Primer ítem</li>
+            <li>Segundo ítem</li>
+            <li>Tercer ítem</li>
+        </ol>
+
+        <h3>Lista No Ordenada</h3>
+        <pre><code>&lt;ul&gt;
+    &lt;li&gt;Primer ítem&lt;/li&gt;
+    &lt;li&gt;Segundo ítem&lt;/li&gt;
+    &lt;li&gt;Tercer ítem&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+        <p>Esto genera:</p>
+        <ul>
+            <li>Primer ítem</li>
+            <li>Segundo ítem</li>
+            <li>Tercer ítem</li>
+        </ul>
+
+        <h2>Conclusión</h2>
+        <p>Este documento ha cubierto los conceptos fundamentales de HTML, incluyendo la estructura básica de un documento, cómo trabajar con texto, imágenes, enlaces, y listas. Entender estos conceptos es esencial para empezar a crear páginas web efectivas y accesibles.</p>
+        
+        <nav>
+            <a href="index.html">Regresar al Inicio</a>
+            <a href="Etiquetas.html">Continuar a Etiquetas HTML</a>
+        </nav>
+    </div>
+
+</body>
+</html>

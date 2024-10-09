@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Básica de HTML</title>
+    
+    <!-- Incluye Bootstrap CSS desde CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Estilos personalizados -->
+    <style>
+        /* Estilos generales del cuerpo */
+        body {
+            background-image: url('https://media.istockphoto.com/id/1318101781/es/foto/fondo-de-textura-negra-de-piedra-pared-de-cemento-oscuro.jpg?s=612x612&w=0&k=20&c=Nw2TTFltqVpwvkk0NwaZ60iaZVQ4dkhnzI46-qt6wyY='); /* Cambia esta URL por la imagen que prefieras */
+            background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+            background-position: center; /* Centra la imagen */
+            background-attachment: fixed; /* Hace que la imagen de fondo esté fija mientras se desplaza */
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center; /* Centra el contenido del texto */
+        }
+        /* Estilos para el título */
+        h1 {
+            font-size: 3em;
+            margin: 40px 0;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para que sea más legible sobre la imagen de fondo */
+        }
+        /* Estilos para las imágenes de ejemplo */
+        .section-link img {
+            width: 100%; /* Imagen ocupa todo el ancho del contenedor */
+            height: 150px; /* Altura uniforme para las imágenes */
+            object-fit: cover; /* Ajusta la imagen para cubrir el área sin distorsión */
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Sombra más fuerte para darle seriedad */
+            transition: transform 0.3s;
+        }
+        .section-link img:hover {
+            transform: scale(1.05); /* Suave efecto al pasar el mouse */
+        }
+        .section-link h2 {
+            margin: 15px 0 0;
+            font-size: 1.8em;
+            color: white;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Sombra para que el texto destaque sobre la imagen de fondo */
+        }
+        /* Estilos para el menú de navegación */
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #FFD700; /* Un color dorado elegante para el hover */
+            text-decoration: underline;
+        }
+        /* Centrado y márgenes adicionales */
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Guía Básica de HTML</h1>
+
+        <!-- Contenedor para los enlaces de sección -->
+        <div class="row text-center">
+            <!-- Enlace a una sección de HTML básico -->
+            <div class="col-md-4 mb-4">
+                <a class="section-link" href="HTMLBasico.html">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRr5kve8uJvA1JcDmKbSh1a_JFvLt5tUI8n2A&s" alt="HTML Básico">
+                    <h2>HTML Básico</h2>
+                </a>
+            </div>
+
+            <!-- Enlace a una sección sobre etiquetas de HTML -->
+            <div class="col-md-4 mb-4">
+                <a class="section-link" href="Etiquetas.html">
+                    <img src="https://www.inabaweb.com/wp-content/uploads/2023/04/Etiquetas-HTML.png" alt="Etiquetas HTML">
+                    <h2>Etiquetas HTML</h2>
+                </a>
+            </div>
+
+            <!-- Enlace a una sección sobre formularios en HTML -->
+            <div class="col-md-4 mb-4">
+                <a class="section-link" href="Formularios.html">
+                    <img src="https://www.freecodecamp.org/espanol/news/content/images/2023/01/form-1.png" alt="Formularios HTML">
+                    <h2>Formularios HTML</h2>
+                </a>
+            </div>
+        </div>
+
+        <!-- Menú de navegación -->
+        <nav class="text-center mt-4">
+            <a href="index.html">Inicio</a>
+            <a href="CSS.html">Guía de CSS</a>
+            <a href="JavaScript.html">Guía de JavaScript</a>
+        </nav>
+    </div>
+
+    <!-- Incluye jQuery y Bootstrap JS desde CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

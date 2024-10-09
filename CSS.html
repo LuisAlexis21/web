@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F5F5F5;
+            margin: 0;
+            padding: 0 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #FFFFFF;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #1976D2;
+        }
+        p {
+            color: #333;
+            line-height: 1.6;
+        }
+        code {
+            background-color: #E3F2FD;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        pre {
+            background-color: #E3F2FD;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+            margin-bottom: 20px;
+        }
+        nav {
+            background-color: #0288D1;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .example {
+            padding: 10px;
+            margin: 20px 0;
+            background-color: #F1F1F1;
+            border-left: 4px solid #1976D2;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="HTMLBasico.html">HTML Básico</a>
+        <a href="Etiquetas.html">Etiquetas HTML</a>
+        <a href="Formularios.html">Formularios HTML</a>
+    </nav>
+
+    <div class="container">
+        <h1>Guía de CSS</h1>
+        <p>CSS (Cascading Style Sheets) es un lenguaje utilizado para describir la presentación de un documento HTML. CSS controla el diseño, la apariencia y la disposición de los elementos en una página web.</p>
+
+        <h2>Cómo Aplicar CSS</h2>
+        <p>Hay tres formas principales de aplicar CSS a un documento HTML:</p>
+
+        <h3>1. CSS en línea</h3>
+        <p>El CSS en línea se aplica directamente a los elementos individuales utilizando el atributo <code>style</code>.</p>
+        <pre><code>&lt;p style="color: blue; font-size: 20px;"&gt;Este es un párrafo estilizado en línea.&lt;/p&gt;</code></pre>
+
+        <h3>2. CSS Interno</h3>
+        <p>El CSS interno se coloca dentro de la etiqueta <code>&lt;style&gt;</code> en la sección <code>&lt;head&gt;</code> de un documento HTML.</p>
+        <pre><code>&lt;style&gt;
+    p {
+        color: red;
+        font-size: 18px;
+    }
+&lt;/style&gt;
+&lt;p&gt;Este es un párrafo estilizado internamente.&lt;/p&gt;</code></pre>
+
+        <h3>3. CSS Externo</h3>
+        <p>El CSS externo se define en un archivo separado con la extensión <code>.css</code>. Se vincula al documento HTML usando la etiqueta <code>&lt;link&gt;</code>.</p>
+        <pre><code>&lt;!-- En el archivo HTML --&gt;
+&lt;link rel="stylesheet" href="styles.css"&gt;
+
+&lt;!-- En el archivo styles.css --&gt;
+p {
+    color: green;
+    font-size: 16px;
+}</code></pre>
+
+        <h2>Selección de Elementos</h2>
+        <p>Para aplicar estilos a elementos HTML, se utilizan selectores. Algunos de los más comunes son:</p>
+
+        <h3>Selector de Etiqueta</h3>
+        <p>Este selector aplica estilos a todos los elementos de una determinada etiqueta.</p>
+        <pre><code>h1 {
+    color: #FF5722;
+}</code></pre>
+        <div class="example">
+            <h1>Este es un encabezado h1 estilizado</h1>
+        </div>
+
+        <h3>Selector de Clase</h3>
+        <p>El selector de clase se aplica a elementos que tienen un atributo <code>class</code> específico.</p>
+        <pre><code>.miClase {
+    font-style: italic;
+    color: #4CAF50;
+}</code></pre>
+        <div class="example">
+            <p class="miClase">Este párrafo está estilizado con una clase.</p>
+        </div>
+
+        <h3>Selector de ID</h3>
+        <p>El selector de ID se aplica a un único elemento que tiene un atributo <code>id</code> específico.</p>
+        <pre><code>#miID {
+    text-align: center;
+    font-weight: bold;
+}</code></pre>
+        <div class="example">
+            <p id="miID">Este párrafo está estilizado con un ID.</p>
+        </div>
+
+        <h2>Propiedades Comunes de CSS</h2>
+        <p>A continuación, se describen algunas de las propiedades CSS más utilizadas:</p>
+
+        <h3>Color</h3>
+        <p>Define el color del texto. Se puede especificar en nombre, hexadecimal, RGB, o HSL.</p>
+        <pre><code>color: #FF0000; /* Rojo */</code></pre>
+
+        <h3>Background-Color</h3>
+        <p>Define el color de fondo de un elemento.</p>
+        <pre><code>background-color: #E0E0E0;</code></pre>
+
+        <h3>Font-Family</h3>
+        <p>Define la fuente utilizada para el texto.</p>
+        <pre><code>font-family: Arial, sans-serif;</code></pre>
+
+        <h3>Font-Size</h3>
+        <p>Define el tamaño del texto.</p>
+        <pre><code>font-size: 18px;</code></pre>
+
+        <h3>Margin</h3>
+        <p>Define el espacio externo alrededor de un elemento.</p>
+        <pre><code>margin: 20px;</code></pre>
+
+        <h3>Padding</h3>
+        <p>Define el espacio interno dentro de un elemento.</p>
+        <pre><code>padding: 10px;</code></pre>
+
+        <h3>Border</h3>
+        <p>Define el borde alrededor de un elemento.</p>
+        <pre><code>border: 1px solid #000000;</code></pre>
+
+        <h2>Modelo de Caja</h2>
+        <p>El modelo de caja en CSS describe el diseño y el comportamiento del espacio ocupado por un elemento en la página web. Incluye <code>margin</code>, <code>border</code>, <code>padding</code> y <code>content</code>.</p>
+        <pre><code>div {
+    width: 200px;
+    padding: 10px;
+    border: 5px solid #000000;
+    margin: 20px;
+}</code></pre>
+        <p>En este ejemplo, el elemento <code>div</code> tendrá un ancho total de 250px (200px + 10px de padding a cada lado + 5px de borde a cada lado).</p>
+
+        <h2>Ejemplo Completo de Estilos CSS</h2>
+        <p>A continuación, se muestra un ejemplo completo de cómo combinar varias propiedades CSS para estilizar una página web.</p>
+        <pre><code>body {
+    background-color: #F5F5F5;
+    font-family: 'Arial', sans-serif;
+}
+
+h1 {
+    color: #1976D2;
+    text-align: center;
+}
+
+p {
+    color: #333;
+    line-height: 1.6;
+    margin: 20px 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}</code></pre>
+
+        <h2>Conclusión</h2>
+        <p>CSS es una herramienta poderosa para mejorar la presentación y el diseño de las páginas web. Esta guía cubre las bases del CSS y cómo aplicarlo para estilizar elementos HTML.</p>
+
+        <nav>
+            <a href="Formularios.html">Regresar a Formularios HTML</a>
+            <a href="JavaScript.html">Continuar a Guía de JavaScript</a>
+        </nav>
+    </div>
+
+</body>
+</html>

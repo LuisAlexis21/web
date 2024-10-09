@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F9F9F9;
+            margin: 0;
+            padding: 0 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #FFFFFF;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #FF5722;
+        }
+        p {
+            color: #333;
+            line-height: 1.6;
+        }
+        code {
+            background-color: #FFEBEE;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        pre {
+            background-color: #FFEBEE;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+            margin-bottom: 20px;
+        }
+        nav {
+            background-color: #FF5722;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .example {
+            padding: 10px;
+            margin: 20px 0;
+            background-color: #FFCCBC;
+            border-left: 4px solid #FF5722;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="HTMLBasico.html">HTML Básico</a>
+        <a href="Etiquetas.html">Etiquetas HTML</a>
+        <a href="CSS.html">Guía de CSS</a>
+    </nav>
+
+    <div class="container">
+        <h1>Guía de JavaScript</h1>
+        <p>JavaScript es un lenguaje de programación que permite agregar interactividad a las páginas web. Es uno de los tres lenguajes principales del desarrollo web junto con HTML y CSS.</p>
+
+        <h2>Cómo Integrar JavaScript en HTML</h2>
+        <p>Hay varias formas de integrar JavaScript en un documento HTML:</p>
+
+        <h3>1. JavaScript en Línea</h3>
+        <p>Se puede agregar código JavaScript directamente dentro de los elementos HTML utilizando el atributo <code>onclick</code>, <code>onmouseover</code>, entre otros.</p>
+        <pre><code>&lt;button onclick="alert('Hola Mundo!')"&gt;Haz clic aquí&lt;/button&gt;</code></pre>
+        <div class="example">
+            <button onclick="alert('Hola Mundo!')">Haz clic aquí</button>
+        </div>
+
+        <h3>2. JavaScript Interno</h3>
+        <p>Se puede incluir JavaScript dentro de una etiqueta <code>&lt;script&gt;</code> en la sección <code>&lt;head&gt;</code> o <code>&lt;body&gt;</code> del documento HTML.</p>
+        <pre><code>&lt;script&gt;
+    function mostrarMensaje() {
+        alert('Este es un mensaje desde un script interno');
+    }
+&lt;/script&gt;
+
+&lt;button onclick="mostrarMensaje()"&gt;Mostrar Mensaje&lt;/button&gt;</code></pre>
+        <div class="example">
+            <button onclick="mostrarMensaje()">Mostrar Mensaje</button>
+        </div>
+
+        <h3>3. JavaScript Externo</h3>
+        <p>Se puede vincular un archivo JavaScript externo usando la etiqueta <code>&lt;script&gt;</code> con el atributo <code>src</code>.</p>
+        <pre><code>&lt;!-- En el archivo HTML --&gt;
+&lt;script src="script.js"&gt;&lt;/script&gt;
+
+&lt;!-- En el archivo script.js --&gt;
+function cambiarTexto() {
+    document.getElementById('miTexto').innerHTML = 'El texto ha cambiado!';
+}</code></pre>
+        <div class="example">
+            <p id="miTexto">Texto original</p>
+            <button onclick="cambiarTexto()">Cambiar Texto</button>
+        </div>
+
+        <h2>Variables y Tipos de Datos</h2>
+        <p>En JavaScript, las variables se pueden declarar usando <code>var</code>, <code>let</code> o <code>const</code>. Los tipos de datos comunes incluyen <code>number</code>, <code>string</code>, <code>boolean</code>, entre otros.</p>
+        <pre><code>let nombre = 'Juan';
+let edad = 25;
+let esEstudiante = true;
+
+console.log('Nombre:', nombre);
+console.log('Edad:', edad);
+console.log('Es estudiante:', esEstudiante);</code></pre>
+
+        <h2>Funciones</h2>
+        <p>Las funciones en JavaScript son bloques de código reutilizables que se pueden definir una vez y ejecutar en cualquier momento.</p>
+        <pre><code>function saludar(nombre) {
+    return 'Hola, ' + nombre + '!';
+}
+
+console.log(saludar('María'));</code></pre>
+        <div class="example">
+            <p><strong>Resultado de la función:</strong> <script>document.write(saludar('María'));</script></p>
+        </div>
+
+        <h2>Manipulación del DOM</h2>
+        <p>JavaScript permite acceder y manipular los elementos del DOM (Document Object Model) de una página web.</p>
+        <pre><code>function cambiarColor() {
+    document.body.style.backgroundColor = '#E0F7FA';
+}</code></pre>
+        <div class="example">
+            <button onclick="cambiarColor()">Cambiar Color de Fondo</button>
+        </div>
+
+        <h2>Eventos</h2>
+        <p>Los eventos en JavaScript permiten que una página web responda a interacciones del usuario, como clics, movimientos del mouse, presiones de teclas, etc.</p>
+        <pre><code>document.getElementById('miBoton').addEventListener('click', function() {
+    alert('Botón clicado!');
+});</code></pre>
+        <div class="example">
+            <button id="miBoton">Clic aquí</button>
+        </div>
+
+        <h2>Conclusión</h2>
+        <p>JavaScript es una herramienta esencial para agregar interactividad y dinamismo a las páginas web. Esta guía ofrece una introducción a los conceptos básicos que cualquier desarrollador web debe conocer.</p>
+
+        <nav>
+            <a href="CSS.html">Regresar a Guía de CSS</a>
+            <a href="index.html">Inicio</a>
+        </nav>
+    </div>
+
+    <script>
+        function mostrarMensaje() {
+            alert('Este es un mensaje desde un script interno');
+        }
+
+        function cambiarTexto() {
+            document.getElementById('miTexto').innerHTML = 'El texto ha cambiado!';
+        }
+
+        function cambiarColor() {
+            document.body.style.backgroundColor = '#E0F7FA';
+        }
+
+        document.getElementById('miBoton').addEventListener('click', function() {
+            alert('Botón clicado!');
+        });
+
+        function saludar(nombre) {
+            return 'Hola, ' + nombre + '!';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de Formularios HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F0F0F0;
+            margin: 0;
+            padding: 0 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #FFFFFF;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #2E7D32;
+        }
+        p {
+            color: #333;
+            line-height: 1.6;
+        }
+        code {
+            background-color: #F1F1F1;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        pre {
+            background-color: #F1F1F1;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+            margin-bottom: 20px;
+        }
+        nav {
+            background-color: #388E3C;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #CCC;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45A049;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="HTMLBasico.html">HTML Básico</a>
+        <a href="Etiquetas.html">Etiquetas HTML</a>
+        <a href="CSS.html">Guía de CSS</a>
+    </nav>
+
+    <div class="container">
+        <h1>Guía de Formularios HTML</h1>
+        <p>Los formularios HTML permiten a los usuarios interactuar con una página web mediante el envío de datos, ya sea a través de texto, botones de opción, casillas de verificación, y otros elementos de entrada.</p>
+
+        <h2>Elementos Básicos del Formulario</h2>
+        <p>Un formulario en HTML se define con la etiqueta <code>&lt;form&gt;</code>. Dentro de esta etiqueta, puedes incluir varios tipos de entradas como <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, y <code>&lt;select&gt;</code>.</p>
+        <pre><code>&lt;form action="/ruta/del/servidor" method="POST"&gt;
+    ... 
+&lt;/form&gt;</code></pre>
+
+        <h2>Entradas de Texto</h2>
+        <p>Las entradas de texto permiten a los usuarios ingresar información libremente en un campo de texto.</p>
+
+        <h3>Campo de Texto</h3>
+        <p>La entrada más común es un campo de texto, que se crea con <code>&lt;input type="text"&gt;</code>.</p>
+        <pre><code>&lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
+&lt;input type="text" id="nombre" name="nombre"&gt;</code></pre>
+
+        <h3>Campo de Contraseña</h3>
+        <p>Para recoger contraseñas, se utiliza <code>&lt;input type="password"&gt;</code>, que oculta el texto ingresado.</p>
+        <pre><code>&lt;label for="contrasena"&gt;Contraseña:&lt;/label&gt;
+&lt;input type="password" id="contrasena" name="contrasena"&gt;</code></pre>
+
+        <h3>Campo de Correo Electrónico</h3>
+        <p>El campo de correo electrónico se define usando <code>&lt;input type="email"&gt;</code>, el cual valida automáticamente la sintaxis del correo.</p>
+        <pre><code>&lt;label for="email"&gt;Correo Electrónico:&lt;/label&gt;
+&lt;input type="email" id="email" name="email"&gt;</code></pre>
+
+        <h3>Área de Texto</h3>
+        <p>Para capturar texto largo, se usa la etiqueta <code>&lt;textarea&gt;</code>.</p>
+        <pre><code>&lt;label for="mensaje"&gt;Mensaje:&lt;/label&gt;
+&lt;textarea id="mensaje" name="mensaje" rows="4" cols="50"&gt;&lt;/textarea&gt;</code></pre>
+
+        <h2>Botones de Opción y Casillas de Verificación</h2>
+        <p>Los botones de opción permiten seleccionar solo una opción entre varias, mientras que las casillas de verificación permiten seleccionar múltiples opciones.</p>
+
+        <h3>Botones de Opción</h3>
+        <p>Los botones de opción se crean usando <code>&lt;input type="radio"&gt;</code>. Todos los botones relacionados deben compartir el mismo nombre.</p>
+        <pre><code>&lt;label&gt;
+    &lt;input type="radio" name="genero" value="masculino"&gt; Masculino
+&lt;/label&gt;
+&lt;label&gt;
+    &lt;input type="radio" name="genero" value="femenino"&gt; Femenino
+&lt;/label&gt;</code></pre>
+
+        <h3>Casillas de Verificación</h3>
+        <p>Las casillas de verificación se crean usando <code>&lt;input type="checkbox"&gt;</code>.</p>
+        <pre><code>&lt;label&gt;
+    &lt;input type="checkbox" name="intereses" value="musica"&gt; Música
+&lt;/label&gt;
+&lt;label&gt;
+    &lt;input type="checkbox" name="intereses" value="deportes"&gt; Deportes
+&lt;/label&gt;</code></pre>
+
+        <h2>Listas Desplegables</h2>
+        <p>Las listas desplegables permiten a los usuarios seleccionar una opción de una lista de valores predefinidos. Se crean usando las etiquetas <code>&lt;select&gt;</code> y <code>&lt;option&gt;</code>.</p>
+        <pre><code>&lt;label for="pais"&gt;País:&lt;/label&gt;
+&lt;select id="pais" name="pais"&gt;
+    &lt;option value="mexico"&gt;México&lt;/option&gt;
+    &lt;option value="espana"&gt;España&lt;/option&gt;
+    &lt;option value="argentina"&gt;Argentina&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+
+        <h2>Botón de Envío</h2>
+        <p>El botón de envío se define con <code>&lt;input type="submit"&gt;</code>. Este botón envía los datos del formulario al servidor especificado en el atributo <code>action</code> del formulario.</p>
+        <pre><code>&lt;input type="submit" value="Enviar"&gt;</code></pre>
+
+        <h2>Ejemplo Completo de Formulario</h2>
+        <p>A continuación, se muestra un formulario HTML completo que incluye varios tipos de entrada.</p>
+        <form action="/ruta/del/servidor" method="POST">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre">
+
+            <label for="contrasena">Contraseña:</label>
+            <input type="password" id="contrasena" name="contrasena">
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email">
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" cols="50"></textarea>
+
+            <label>
+                <input type="radio" name="genero" value="masculino"> Masculino
+            </label>
+            <label>
+                <input type="radio" name="genero" value="femenino"> Femenino
+            </label>
+
+            <label>
+                <input type="checkbox" name="intereses" value="musica"> Música
+            </label>
+            <label>
+                <input type="checkbox" name="intereses" value="deportes"> Deportes
+            </label>
+
+            <label for="pais">País:</label>
+            <select id="pais" name="pais">
+                <option value="mexico">México</option>
+                <option value="espana">España</option>
+                <option value="argentina">Argentina</option>
+            </select>
+
+            <input type="submit" value="Enviar">
+        </form>
+
+        <h2>Conclusión</h2>
+        <p>Los formularios HTML son una herramienta esencial para recopilar datos de los usuarios en la web. Esta guía cubre los elementos fundamentales que se pueden utilizar en un formulario para capturar diferentes tipos de datos.</p>
+
+        <nav>
+            <a href="Etiquetas.html">Regresar a Etiquetas HTML</a>
+            <a href="CSS.html">Continuar a Guía de CSS</a>
+        </nav>
+    </div>
+
+</body>
+</html>

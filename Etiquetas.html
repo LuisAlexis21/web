@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de Etiquetas HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #F9F9F9;
+            margin: 0;
+            padding: 0 20px;
+        }
+        h1, h2, h3 {
+            color: #D32F2F;
+        }
+        p {
+            color: #555;
+        }
+        code {
+            background-color: #F1F1F1;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        pre {
+            background-color: #F1F1F1;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        nav {
+            background-color: #C62828;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="HTMLBasico.html">HTML Básico</a>
+        <a href="Formularios.html">Formularios HTML</a>
+        <a href="CSS.html">Guía de CSS</a>
+    </nav>
+
+    <div class="container">
+        <h1>Guía de Etiquetas HTML</h1>
+        <p>HTML está compuesto por diversas etiquetas (o tags) que definen la estructura y el contenido de una página web. Cada etiqueta tiene un propósito específico y es fundamental entender cómo y cuándo usarlas.</p>
+
+        <h2>Etiquetas Estructurales</h2>
+        <p>Las etiquetas estructurales organizan el contenido en secciones que ayudan a definir la disposición de la página.</p>
+        
+        <h3>&lt;html&gt;</h3>
+        <p>La etiqueta <code>&lt;html&gt;</code> encierra todo el contenido de una página HTML. Es la etiqueta raíz del documento.</p>
+        <pre><code>&lt;html&gt;
+    ...
+&lt;/html&gt;</code></pre>
+
+        <h3>&lt;head&gt;</h3>
+        <p>La etiqueta <code>&lt;head&gt;</code> contiene metadatos sobre la página, como el título, enlaces a hojas de estilo, y scripts.</p>
+        <pre><code>&lt;head&gt;
+    &lt;title&gt;Mi Página Web&lt;/title&gt;
+&lt;/head&gt;</code></pre>
+
+        <h3>&lt;body&gt;</h3>
+        <p>La etiqueta <code>&lt;body&gt;</code> envuelve todo el contenido visible de la página, como textos, imágenes, y enlaces.</p>
+        <pre><code>&lt;body&gt;
+    &lt;h1&gt;Título de la Página&lt;/h1&gt;
+    &lt;p&gt;Este es un párrafo.&lt;/p&gt;
+&lt;/body&gt;</code></pre>
+
+        <h2>Etiquetas de Texto</h2>
+        <p>Las etiquetas de texto son utilizadas para dar formato y estructura al contenido textual.</p>
+
+        <h3>&lt;p&gt; - Párrafo</h3>
+        <p>La etiqueta <code>&lt;p&gt;</code> se utiliza para definir párrafos de texto.</p>
+        <pre><code>&lt;p&gt;Este es un párrafo.&lt;/p&gt;</code></pre>
+
+        <h3>&lt;h1&gt; a &lt;h6&gt; - Encabezados</h3>
+        <p>Los encabezados van desde <code>&lt;h1&gt;</code> (el más importante) hasta <code>&lt;h6&gt;</code> (el menos importante).</p>
+        <pre><code>&lt;h1&gt;Encabezado 1&lt;/h1&gt;
+&lt;h2&gt;Encabezado 2&lt;/h2&gt;
+&lt;h3&gt;Encabezado 3&lt;/h3&gt;</code></pre>
+
+        <h3>&lt;strong&gt; y &lt;em&gt; - Negrita y Cursiva</h3>
+        <p>La etiqueta <code>&lt;strong&gt;</code> se utiliza para enfatizar texto en negrita, y <code>&lt;em&gt;</code> para hacerlo en cursiva.</p>
+        <pre><code>&lt;p&gt;Este es un &lt;strong&gt;texto importante&lt;/strong&gt; y este es un &lt;em&gt;texto en cursiva&lt;/em&gt;.&lt;/p&gt;</code></pre>
+
+        <h2>Etiquetas de Enlaces</h2>
+        <p>Los enlaces son una parte fundamental de la navegación web, y se crean usando la etiqueta <code>&lt;a&gt;</code>.</p>
+
+        <h3>&lt;a&gt; - Enlace</h3>
+        <p>La etiqueta <code>&lt;a&gt;</code> define un hipervínculo. El atributo <code>href</code> especifica la URL del enlace.</p>
+        <pre><code>&lt;a href="https://www.ejemplo.com"&gt;Visitar Ejemplo&lt;/a&gt;</code></pre>
+
+        <h2>Etiquetas de Imágenes</h2>
+        <p>Las imágenes se insertan en las páginas web con la etiqueta <code>&lt;img&gt;</code>.</p>
+
+        <h3>&lt;img&gt; - Imagen</h3>
+        <p>La etiqueta <code>&lt;img&gt;</code> incluye los atributos <code>src</code> (fuente de la imagen) y <code>alt</code> (texto alternativo).</p>
+        <pre><code>&lt;img src="https://via.placeholder.com/150" alt="Ejemplo de Imagen"&gt;</code></pre>
+        <p>Ejemplo:</p>
+        <img src="https://via.placeholder.com/150" alt="Ejemplo de Imagen">
+
+        <h2>Etiquetas de Listas</h2>
+        <p>Las listas organizan ítems en un formato ordenado o desordenado.</p>
+
+        <h3>&lt;ul&gt; - Lista No Ordenada</h3>
+        <p>Las listas no ordenadas usan <code>&lt;ul&gt;</code> y se componen de elementos <code>&lt;li&gt;</code>.</p>
+        <pre><code>&lt;ul&gt;
+    &lt;li&gt;Ítem 1&lt;/li&gt;
+    &lt;li&gt;Ítem 2&lt;/li&gt;
+    &lt;li&gt;Ítem 3&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+        <ul>
+            <li>Ítem 1</li>
+            <li>Ítem 2</li>
+            <li>Ítem 3</li>
+        </ul>
+
+        <h3>&lt;ol&gt; - Lista Ordenada</h3>
+        <p>Las listas ordenadas usan <code>&lt;ol&gt;</code> y también se componen de elementos <code>&lt;li&gt;</code>.</p>
+        <pre><code>&lt;ol&gt;
+    &lt;li&gt;Primer ítem&lt;/li&gt;
+    &lt;li&gt;Segundo ítem&lt;/li&gt;
+    &lt;li&gt;Tercer ítem&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+        <ol>
+            <li>Primer ítem</li>
+            <li>Segundo ítem</li>
+            <li>Tercer ítem</li>
+        </ol>
+
+        <h2>Etiquetas de División y Contenedor</h2>
+        <p>Las etiquetas de división y contenedor permiten agrupar y organizar elementos dentro de la página.</p>
+
+        <h3>&lt;div&gt; - División</h3>
+        <p>La etiqueta <code>&lt;div&gt;</code> se utiliza para agrupar bloques de contenido, siendo esencial para la estructura de diseño CSS.</p>
+        <pre><code>&lt;div&gt;
+    &lt;p&gt;Este es un bloque de contenido.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+        <h3>&lt;span&gt; - Contenedor en Línea</h3>
+        <p>La etiqueta <code>&lt;span&gt;</code> es similar a <code>&lt;div&gt;</code>, pero se utiliza para agrupar elementos en línea, como texto dentro de un párrafo.</p>
+        <pre><code>&lt;p&gt;Este texto tiene &lt;span&gt;una parte resaltada&lt;/span&gt; en línea.&lt;/p&gt;</code></pre>
+
+        <h2>Conclusión</h2>
+        <p>Conocer y comprender el uso de las etiquetas HTML es fundamental para estructurar correctamente una página web. Esta guía cubre las etiquetas más comunes que se utilizan en el desarrollo web básico.</p>
+
+        <nav>
+            <a href="HTMLBasico.html">Regresar a HTML Básico</a>
+            <a href="Formularios.html">Continuar a Formularios HTML</a>
+        </nav>
+    </div>
+
+</body>
+</html>
